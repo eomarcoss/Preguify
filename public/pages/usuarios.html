@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <div
+    class="card p-3 mt-2 d-flex justify-content-center align-items-center border-0"
+  >
+    <h3 class="fw-bold">Criar Usuário</h3>
+
+    <form id="userFormTask" class="mb-3 text-center">
+      <div class="profile-wrapper">
+        <div class="">
+          <img
+            src="../img/adicionar_user.jpg"
+            class="profile-img"
+            id="preview"
+            onclick="document.getElementById('photoInput').click()"
+          />
+
+          <input
+            type="file"
+            id="photoInput"
+            class="profile-input"
+            accept="image/*"
+            onchange="previewImage(event)"
+          />
+        </div>
+      </div>
+
+      <input
+        type="text"
+        id="UserNameTask"
+        class="form-control mt-4 border-primary border-3"
+        placeholder="Digite seu nome"
+        required
+      />
+      <button class="btn btn-primary mt-2 w-100 fw" type="submit">Criar</button>
+    </form>
+  </div>
+
+  <div class="card mt-3 text-center border-0 d-flex align-items-center">
+    <h3 class="fw-bold">Usuário Ativos</h3>
+    <ul id="userList" class="list-group text-start">
+      <!-- Usuários serão inseridos aqui -->
+    </ul>
+    <div class="text-end remove-all-users">
+      <button class="btn btn-danger" id="btn-delete-all-users">
+        Remover todos
+      </button>
+    </div>
+  </div>
+</div>

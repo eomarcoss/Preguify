@@ -1,0 +1,53 @@
+<div class="container-fluid">
+  <div class="card border-0 mt-2 d-flex justify-content-center align-items-center">
+    <h3 class="text-center fw-bold">Criar tarefa</h3>
+    <form id="newTaskForm" class="mb-3">
+      <h6>Titulo</h6>
+      <input
+        type="text"
+        id="taskTitle"
+        class="form-control mb-4 border-primary"
+        placeholder="Título da task"
+        maxlength="50"
+        required
+      />
+      <h6>Descrição</h6>
+      <textarea
+        id="taskDescription"
+        class="form-control mb-4 border-primary"
+        placeholder="Descrição (opcional)"
+        rows="2"
+        maxlength="200"
+      ></textarea>
+      <h6>Pontuação</h6>
+      <input
+        type="number"
+        id="taskPoints"
+        class="form-control mb-4 border-primary"
+        placeholder="Pontuação da task"
+        min="1"
+        required
+      />
+      <h6>Data</h6>
+
+      <input
+        type="datetime-local"
+        id="expiresAt"
+        class="form-control mb-4 border-primary"
+        required
+      />
+      <h6>Atribuir para</h6>
+      <select
+        id="taskUser"
+        class="form-select mb-2 border-primary mb-4"
+        required
+      >
+        <!-- Usuários para selecionar -->
+      </select>
+
+      <button class="btn btn-success w-100" id="createTask" type="submit">
+        Criar
+      </button>
+    </form>
+  </div>
+</div>
